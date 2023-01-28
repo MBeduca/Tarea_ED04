@@ -9,10 +9,22 @@ public class CCuenta {
     public double saldo;
     public double tipoInterés;
 
+    /**
+     * Contructor de la clase sin parametros
+     * 
+     */
     public CCuenta()
     {
     }
 
+    /**
+     * Constructor de la clase
+     * 
+     * @param nom nombre de la persona
+     * @param cue numero de cuenta
+     * @param sal saldo de la cuenta
+     * @param tipo tipo de interes de cuenta
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -20,11 +32,22 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * Devuelve el estado de la cuenta
+     * 
+     * @return double
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * Ingresa saldo en la cuenta
+     * 
+     * @param cantidad double
+     * @throws Exception Mensaje si cantidad menor a 0
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -32,6 +55,12 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Retira saldo de la cuenta
+     * 
+     * @param cantidad double
+     * @throws Exception  Mensaje si cantidad  menor o igual 0 o si estado menor a 0
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -41,57 +70,73 @@ public class CCuenta {
         setSaldo(getSaldo() - cantidad);
     }
 
-    /**
-     * @return the nombre
+   /**
+     * Devuelve el nombre
+     * 
+     * @return String
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * Actualiza el nombre
+     * 
+     * @param nombre String
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the cuenta
+     * Devuelve el numero de cuenta
+     * 
+     * @return String
      */
     public String getCuenta() {
         return cuenta;
     }
 
     /**
-     * @param cuenta the cuenta to set
+     * Actualiza el numero de cuenta
+     * 
+     * @param cuenta String
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
     /**
-     * @return the saldo
+     * Devuelve el saldo
+     * 
+     * @return Double
      */
     public double getSaldo() {
         return saldo;
     }
 
     /**
-     * @param saldo the saldo to set
+     * Actualiza el saldo
+     * 
+     * @param saldo Double
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     /**
-     * @return the tipoInterés
+     * Devuelve el tipo de interes
+     * 
+     * @return Double
      */
     public double getTipoInterés() {
         return tipoInterés;
     }
 
     /**
-     * @param tipoInterés the tipoInterés to set
+     * Actualiza el tipo de interes
+     * 
+     * @param tipoInterés Double
      */
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;

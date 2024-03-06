@@ -9,6 +9,11 @@ public class Main {
         operativa_cuenta(0);
     }
 
+    /**
+     * Gestion de la cuenta
+     * 
+     * @param cantidad float
+     */
     private static void operativa_cuenta(float cantidad) {
         CCuenta cuenta1;
         double saldoActual;

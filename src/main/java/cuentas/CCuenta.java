@@ -8,10 +8,21 @@ public class CCuenta {
     public double saldo;
     public double tipoInterés;
 
+    /**
+     * Constructor de la clase sin parametros
+     */
     public CCuenta()
     {
     }
 
+    /**
+     * Constructor de la clase con 4 parametos
+     * 
+     * @param nom nombre de la persona
+     * @param cue numero de cuenta
+     * @param sal saldo de la cuenta
+     * @param tipo tipo de interes de la cuenta
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -19,11 +30,22 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * Devuelve el saldo de la cuenta
+     * 
+     * @return double 
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * Ingresa en la cuenta la cantidad especificada
+     * 
+     * @param cantidad double
+     * @throws Exception Excepcion por introducir un valor negativo
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -31,6 +53,12 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Retirar de la cuenta la cantidad especificada
+     * 
+     * @param cantidad double
+     * @throws Exception Excepcion por introducir un valor negativo o por no haber saldo disponible
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
